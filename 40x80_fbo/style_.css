@@ -1,0 +1,137 @@
+@import url(data.css);
+
+:root {
+    --stickerWidth: 58mm;
+    --stickerHeight: 39.9mm;
+	/* page: 300; */
+}
+* {
+    box-sizing: border-box;
+}
+
+
+/* @font-face {
+    font-family: 'Baloo Cyrillic';
+    src: url('fonts/BalooCyrillic.ttf') format('truetype');
+} */
+
+body,
+html {
+    font-family: Manrope;
+    font-weight: 200;
+    margin: 0;
+    padding: 0 0 0 0;
+}
+
+@media print {
+  @page {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.var__batchNumber,
+.var__date,
+.var__owner,
+.var__address,
+.var__mail,
+.var__id,
+.var__color,
+.var__inside,
+.var__name,
+.var__length {
+	font-style: normal;
+}
+.var__date {
+	text-wrap: nowrap;
+}
+.var__owner {
+	hyphens: none;
+}
+
+.sticker {
+    position: absolute;
+    left: 0;
+    /* bottom: 100%; */
+    transform-origin: 0 100%;
+
+    width: var(--stickerWidth);
+    height: var(--stickerHeight);
+    /* margin-left: auto; */
+
+    /* background-color: red; */
+    -webkit-print-color-adjust: exact;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* transform: rotate(90deg); */
+}
+.sticker__wrapper {
+    /* display: flex; */
+	position: absolute;
+	top: 1mm;
+    flex-direction: column;
+    gap: 1mm;
+    /* justify-content: center; */
+    /* background: green; */
+	/* margin-top: -20px; */
+	/* padding: 0 2mm; */
+	padding: 0;
+	height: calc(var(--stickerHeight) - 1mm);
+}
+.sticker__text {
+    font-size: 6.5pt;
+    line-height: 1.1;
+    display: inline-block;
+    /* width: calc(var(--stickerWidth) - 3mm); */
+	hyphens: auto;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+.sticker.sticker_win {
+	font-family: Tahoma;
+}
+.sticker__text.sticker__text_win {
+	/* font-size: 6.7pt; */
+}
+
+.sticker__batchNumber,
+.sticker__date {
+	font-style: normal;
+}
+.sticker__batchNumber::before {
+	content: var(--batchNumber);
+}
+
+.sticker__date::before {
+	content: var(--date);
+	text-wrap: nowrap;
+}
+
+.sticker__barcode {
+	/* margin-left: 1px; */
+	position: absolute;
+	bottom: 0;
+	/* margin-bottom: -41px; */
+	/* height: 40px; */
+	/* background-color: green; */
+}
+
+.sticker__barcode-text {
+    font-size: 7pt;
+    line-height: 0.9;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	/* bottom: 6.2mm; */
+	font-weight: 400;
+	z-index: 1;
+	background-color: #fff;
+	/* padding: 3.5px; */
+}
+
+.name {
+	display: none;
+}

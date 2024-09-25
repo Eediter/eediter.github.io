@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+	<head>
+	<script>var value = 2039540972971;</script>
+	<meta charset="utf-8">
+	<title>Этикетка 40x58мм</title>
+	<link href="style_.css" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&family=PT+Mono&display=swap" rel="stylesheet">
+	<script src="JsBarcode.all.min.js"></script>
+	</head>
+	<body>
+	<div class="sticker sticker_win">
+		<div class="sticker__wrapper var">
+			<svg class="sticker__barcode" id="barcode"></svg>
+			<span class="sticker__barcode-text" id="value"></span>
+			<span class="sticker__id"><em class="var__id"></em></span>
+			<span class="sticker__text sticker__text_win">Бумажная гирлянда «<em class="var__name"></em>». Цвет: <em class="var__color"></em>. Состав: <em class="var__inside"></em>. Длина: ~<em class="var__length"></em>м. Срок годности не&nbsp;ограничен.</span>
+			<span class="sticker__text sticker__text_win">Изготовитель: <em class="var__owner"></em>, <em class="var__address"></em>. Сделано в России. По вопросам качества обращайтесь по эл. почте <em class="var__mail"></em></span>
+			<span class="sticker__text">Не подлежит обязательной сертификации и декларированию. Дата изготовления: <em class="var__date"></em>. Номер партии: <em class="var__batchNumber"></em></span>
+		</div>
+	</div>
+    <script>
+        // Получаем параметры из URL
+        const params = new URLSearchParams(window.location.search);
+
+        // Присваиваем значения CSS переменным
+        document.documentElement.style.setProperty('--id', params.get('id') || '');
+        document.documentElement.style.setProperty('--name', params.get('name') || '');
+        document.documentElement.style.setProperty('--color', params.get('color') || '');
+        document.documentElement.style.setProperty('--length', params.get('length') || '');
+        document.documentElement.style.setProperty('--inside', params.get('inside') || '');
+        document.documentElement.style.setProperty('--owner', params.get('owner') || '');
+        document.documentElement.style.setProperty('--address', params.get('address') || '');
+        document.documentElement.style.setProperty('--mail', params.get('mail') || '');
+        document.documentElement.style.setProperty('--date', params.get('date') || '');
+        document.documentElement.style.setProperty('--batchNumber', params.get('batchNumber') || '');
+
+        // Заполняем значения на странице
+        // document.querySelector('.var__id').textContent = params.get('id') || '';
+        document.querySelector('.var__name').textContent = params.get('name') || '';
+        document.querySelector('.var__color').textContent = params.get('color') || '';
+        document.querySelector('.var__length').textContent = params.get('length') || '';
+        document.querySelector('.var__inside').textContent = params.get('inside') || '';
+        document.querySelector('.var__owner').textContent = params.get('owner') || '';
+        document.querySelector('.var__address').textContent = params.get('address') || '';
+        document.querySelector('.var__mail').textContent = params.get('mail') || '';
+        document.querySelector('.var__date').textContent = params.get('date') || '';
+        document.querySelector('.var__batchNumber').textContent = params.get('batchNumber') || '';
+    </script>
+	<script src="barcode.js"></script>
+	</body>
+</html>

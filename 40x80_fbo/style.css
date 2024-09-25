@@ -1,0 +1,155 @@
+@import url(data.css);
+
+:root {
+    --stickerWidth: 58mm;
+    --stickerHeight: 39.9mm;
+	/* page: 300; */
+}
+* {
+    box-sizing: border-box;
+}
+
+
+/* @font-face {
+    font-family: 'Baloo Cyrillic';
+    src: url('fonts/BalooCyrillic.ttf') format('truetype');
+} */
+
+body,
+html {
+    font-family: Manrope;
+    font-weight: 200;
+    margin: 0;
+    padding: 0 0 0 0;
+}
+
+@media print {
+  @page {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.sticker {
+    position: absolute;
+    left: 0;
+    /* bottom: 100%; */
+    transform-origin: 0 100%;
+
+    width: var(--stickerWidth);
+    height: var(--stickerHeight);
+    /* margin-left: auto; */
+
+    /* background-color: red; */
+    -webkit-print-color-adjust: exact;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* transform: rotate(90deg); */
+}
+.sticker.sticker_win {
+	font-family: Tahoma;
+}
+.sticker__wrapper {
+    display: flex;
+	position: absolute;
+	top: 1mm;
+    flex-direction: column;
+    gap: 1mm;
+    /* justify-content: center; */
+    /* background: green; */
+	/* margin-top: -20px; */
+	padding: 0 2mm;
+	height: calc(var(--stickerHeight) - 1mm);
+}
+.sticker__text {
+    font-size: 7.5pt;
+    line-height: 1.1;
+    display: inline-block;
+    /* width: calc(var(--stickerWidth) - 3mm); */
+	hyphens: auto;
+}
+.sticker__text.sticker__text_win {
+	font-size: 7.4pt;
+}
+
+.sticker__id {
+	background-color: #000;
+	color: #FFF;
+	position: absolute;
+	bottom: 3px;
+	right: 3px;
+	font-size: 7pt;
+	padding: 2px;
+	font-weight: 700;
+}
+.sticker__name {
+	font-style: normal;
+	hyphens: none;
+}
+.var__batchNumber,
+.var__date,
+.var__owner,
+.var__address,
+.var__mail,
+.var__id,
+.var__color,
+.var__inside,
+.var__name,
+.var__length {
+	font-style: normal;
+}
+.var__date {
+	text-wrap: nowrap;
+}
+.var__owner {
+	hyphens: none;
+}
+/* .var__batchNumber::before {
+	content: var(--batchNumber);
+}
+.var__owner::before {
+	content: var(--owner);
+}
+.var__address::before {
+	content: var(--address);
+}
+.var__mail::before {
+	content: var(--mail);
+}
+.var__id::before {
+	content: var(--id);
+}
+.var__color::before {
+	content: var(--color);
+}
+.var__inside::before {
+	content: var(--inside);
+}
+.var__date::before {
+	content: var(--date);
+	text-wrap: nowrap;
+} */
+
+.sticker__barcode {
+	margin-left: 1px;
+	position: absolute;
+	bottom: 0;
+	/* margin-bottom: -41px; */
+	/* height: 40px; */
+}
+
+.sticker__barcode-text {
+    font-size: 7pt;
+    line-height: 0.9;
+	position: absolute;
+	bottom: 6.2mm;
+	font-weight: 400;
+	z-index: 1;
+}
+
+.name {
+	display: none;
+}
