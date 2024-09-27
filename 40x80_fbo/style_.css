@@ -66,6 +66,8 @@ html {
     align-items: center;
     justify-content: center;
 
+	overflow: hidden;
+
     /* transform: rotate(90deg); */
 }
 .sticker__wrapper {
@@ -130,6 +132,9 @@ html {
 	z-index: 1;
 	background-color: #fff;
 	/* padding: 3.5px; */
+	padding-top: 1px;
+	padding-right: 2px;
+	padding-left: 1px;
 }
 
 .name {
