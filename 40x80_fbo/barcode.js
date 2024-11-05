@@ -6,7 +6,8 @@ JsBarcode("#barcode", value, {
 	flat: true,
 	displayValue: false,
 	// width: 1.68,
-	width: 2.3,
-	height: 36,
+	width: 2.1,
+	// height: 36,
+	height: 60,
 	margin: 0
 });

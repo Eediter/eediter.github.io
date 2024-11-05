@@ -85,12 +85,15 @@ html {
 }
 .sticker__text {
     font-size: 6.5pt;
-    line-height: 1.1;
-    display: inline-block;
+    line-height: 1;
+    display: block;
     /* width: calc(var(--stickerWidth) - 3mm); */
 	hyphens: auto;
-	padding-left: 5px;
+	padding-left: 7px;
 	padding-right: 5px;
+	padding-bottom: 3px;
+	position: relative;
+	background-color: #fff;
 }
 .sticker.sticker_win {
 	font-family: Tahoma;
@@ -116,16 +119,18 @@ html {
 	/* margin-left: 1px; */
 	position: absolute;
 	bottom: 0;
+	right: 5px;
 	/* margin-bottom: -41px; */
 	/* height: 40px; */
 	/* background-color: green; */
 }
 
-.sticker__barcode-text {
+.sticker__barcode-text,
+.sticker__id {
     font-size: 7pt;
     line-height: 0.9;
 	position: absolute;
-	right: 0;
+	right: 5px;
 	bottom: 0;
 	/* bottom: 6.2mm; */
 	font-weight: 400;
@@ -135,8 +140,19 @@ html {
 	padding-top: 1px;
 	padding-right: 2px;
 	padding-left: 1px;
+	padding-bottom: 1px;
 }
 
 .name {
 	display: none;
+}
+
+.sticker__id {
+	z-index: 1;
+	background-color: #000;
+	color: #fff;
+	font-weight: 700;
+	left: 0;
+	right: auto;
+	padding-left: 7px;
 }
