@@ -83,6 +83,14 @@ html {
 	padding: 0;
 	height: calc(var(--stickerHeight) - 1mm);
 }
+.sticker_box .sticker__wrapper {
+	padding-top: 10px;
+	gap: 0;
+}
+.sticker_box .sticker__wrapper {
+    display: flex;
+	width: 100%;
+}
 .sticker__text {
     font-size: 6.5pt;
     line-height: 1;
@@ -95,11 +103,25 @@ html {
 	position: relative;
 	background-color: #fff;
 }
+.sticker_box .sticker__text {
+	/* background-color: red; */
+	width: 100%;
+	font-size: 8pt;
+	margin-top: 3px;
+}
 .sticker.sticker_win {
 	font-family: Tahoma;
 }
 .sticker__text.sticker__text_win {
 	/* font-size: 6.7pt; */
+	display: block;
+}
+
+.sticker_box .var__name {
+	font-size: 10pt;
+	font-weight: 400;
+	margin-top: -5px;
+	display: block;
 }
 
 .sticker__batchNumber,
@@ -124,6 +146,11 @@ html {
 	/* height: 40px; */
 	/* background-color: green; */
 }
+.sticker__barcode.sticker__barcode_box {
+	/* bottom: 100%; */
+	right: auto;
+	left: 8px;
+}
 
 .sticker__barcode-text,
 .sticker__id {
@@ -141,6 +168,21 @@ html {
 	padding-right: 2px;
 	padding-left: 1px;
 	padding-bottom: 1px;
+}
+.sticker_box .sticker__id {
+	position: relative;
+	padding-left: 2px;
+	font-size: 9pt;
+	color: #000;
+	background-color: #fff;
+	font-weight: 500;
+	
+}
+.sticker_box .sticker__barcode-text {
+	position: relative ;
+	inset: 0 7px;
+	font-size: 9pt;
+	padding-bottom: 15px;
 }
 
 .name {
