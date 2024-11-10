@@ -86,6 +86,7 @@ html {
 .sticker_box .sticker__wrapper {
 	padding-top: 10px;
 	gap: 0;
+	padding-left: 3px;
 }
 .sticker_box .sticker__wrapper {
     display: flex;
@@ -108,6 +109,7 @@ html {
 	width: 100%;
 	font-size: 8pt;
 	margin-top: 3px;
+	padding-left: 10px;
 }
 .sticker.sticker_win {
 	font-family: Tahoma;
@@ -149,7 +151,7 @@ html {
 .sticker__barcode.sticker__barcode_box {
 	/* bottom: 100%; */
 	right: auto;
-	left: 8px;
+	left: 11px;
 }
 
 .sticker__barcode-text,
@@ -180,9 +182,8 @@ html {
 }
 .sticker_box .sticker__barcode-text {
 	position: relative ;
-	inset: 0 7px;
+	padding: 0 0 15px 13px;
 	font-size: 9pt;
-	padding-bottom: 15px;
 }
 
 .name {
