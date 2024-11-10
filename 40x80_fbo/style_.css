@@ -93,7 +93,7 @@ html {
 }
 .sticker__text {
     font-size: 6.5pt;
-    line-height: 1;
+    line-height: .99;
     display: block;
     /* width: calc(var(--stickerWidth) - 3mm); */
 	hyphens: auto;
