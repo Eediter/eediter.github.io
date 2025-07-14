@@ -124,6 +124,8 @@ html {
 	font-weight: 400;
 	margin-top: -5px;
 	display: block;
+	position: relative;
+	z-index: 2;
 }
 
 .sticker__batchNumber,
@@ -198,4 +200,44 @@ html {
 	left: 0;
 	right: auto;
 	padding-left: 7px;
+}
+
+.recording {
+	position: absolute;
+	width: 60px;
+	height: 60px;
+	right: 50px;
+	bottom: 45px;
+	z-index: 1;
+	/* overflow: hidden; */
+}
+
+.recording__img {
+	width: 100%;
+	/* height: 100%; */
+}
+
+.recording__caption {
+	/* background: red; */
+	position: absolute;
+	z-index: 10;
+	bottom: 17px;
+	right: -40px;
+	text-transform: uppercase;
+	font-weight: 700;
+    font-size: 6pt;
+    line-height: 1.05;
+	text-align: right;
+}
+
+.recording__id {
+	position: absolute;
+	z-index: 10;
+	bottom: 7px;
+	right: 20px;
+	text-transform: uppercase;
+	font-weight: 700;
+    font-size: 3.8pt;
+    line-height: .99;
+	display: none;
 }
